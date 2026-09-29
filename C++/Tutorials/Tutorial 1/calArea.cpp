@@ -1,0 +1,57 @@
+#include <iostream> 
+using namespace std; 
+// TO-DO: Write your functions here 
+
+int calArea(int side);
+int calArea(int length, int width);
+int calArea(int base1, int base2, int height);
+
+ int main() {     
+    int choice; 
+     
+    while (true) { 
+        // Display menu options         
+        std::cout << "\nChoose an option:\n";         
+        std::cout << "1 - Square\n";         
+        std::cout << "2 - Rectangle\n";         
+        std::cout << "3 - Trapezoid\n";         
+        std::cout << "Other - Exit\n";         
+        std::cout << "Enter your choice (int): ";         
+        std::cin >> choice; 
+        if (choice == 1) {             // Square             
+            int side; 
+            std::cout << "Enter the side length of the square (int): ";             
+            std::cin >> side;             
+            std::cout << "Area of Square: " << calArea(side) << "\n"; 
+        }  
+        else if (choice == 2) {             // Rectangle             
+            int length, width; 
+            std::cout << "Enter the length and width of the rectangle (int): ";             
+            std::cin >> length >> width; 
+            std::cout << "Area of Rectangle: " << calArea(length, width) << "\n"; 
+        }  
+        else if (choice == 3) {             // Trapezoid 
+            int base1, base2, height;             
+            std::cout << "Enter the two bases and height of the trapezoid (int): ";             
+            std::cin >> base1 >> base2 >> height; 
+            std::cout << "Area of Trapezoid: " << calArea(base1, base2, height) << "\n"; 
+        }          else { 
+            // Exit program 
+            std::cout << "Exiting program..." << "\n";             
+            break; 
+        } 
+    }      
+    return 0; 
+} 
+
+int calArea(int side) {
+    return side * side;
+}
+
+int calArea(int length, int width) {
+    return length * width;
+}
+
+int calArea(int base1, int base2, int height) {
+    return 0.5 * (base1 + base2) * height;
+}

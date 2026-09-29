@@ -1,0 +1,18 @@
+#include "Student.h"
+#include <iostream>
+using namespace std;
+
+// TODO: Implement Student class constructor and initialize studentID 
+Student::Student(string n, int a, int id)
+    : Person(n, a), studentID(id) {
+}
+
+void Student::displayInfo() const {
+    // TODO: Output Student Information
+
+    Person::displayInfo();
+    cout << "Student ID: " << studentID << endl;
+
+    // alternatively, display everything together
+    // cout << "Name: " << name << ", Age: " << age << ", Student ID: " << studentID << endl;
+}

@@ -1,0 +1,1 @@
+            if (i != j && i > j) { // only consider elements below the diagonal
